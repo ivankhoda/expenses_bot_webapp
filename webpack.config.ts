@@ -43,7 +43,7 @@ const config = {
     filename: "[name].js",
   },
   devServer: {
-    static: path.join(__dirname, "build"),
+    static: path.join(__dirname, "dist"),
     historyApiFallback: true,
     compress: true,
     hot: true,
