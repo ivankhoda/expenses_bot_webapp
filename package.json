@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production webpack  serve",
+    "start": "node server.js",
     "dev": "cross-env NODE_ENV=development webpack  serve --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "publish": "cross-env NODE_ENV=production gh-pages -d dist",
