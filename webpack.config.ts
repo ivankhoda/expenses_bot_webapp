@@ -44,6 +44,7 @@ const config = {
   },
   devServer: {
     static: path.join(__dirname, "dist"),
+    allowedHosts: [".ngrok.io"],
     historyApiFallback: true,
     compress: true,
     hot: true,

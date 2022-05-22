@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import { HashRouter } from "react-router-dom";
-import { Dashboard } from "../Dashboard/Dashboard";
 import { Header } from "../Header/Header";
 import { Main } from "../Main/Main";
 import { Sidebar } from "../Sidebar/Sidebar";
@@ -18,8 +17,8 @@ export const App = () => {
   // }
   const routes = [
     { path: "/", name: "Main", Component: <Main /> },
-    { path: "/dashboard", name: "Dashboard", Component: <Dashboard /> },
-    { path: "/statistics", name: "Statistics", Component: <Main /> },
+    // { path: "/dashboard", name: "Dashboard", Component: <Dashboard /> },
+    // { path: "/statistics", name: "Statistics", Component: <Main /> },
   ];
   return (
     <div className="App">
