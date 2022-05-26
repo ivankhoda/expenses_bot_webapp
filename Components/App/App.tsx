@@ -15,7 +15,7 @@ export const App = () => {
   //@ts-ignore
   console.log(window.Telegram.WebApp.initData, "this is telegram web app init data");
   //@ts-ignore
-  alert(window.Telegram.WebApp.initData, "this is telegram web app init data");
+  window.Telegram.WebApp.sendData("hello duuude");
   const { token, setToken } = useToken();
 
   // if (!token) {
