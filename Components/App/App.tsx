@@ -12,6 +12,8 @@ import { useToken } from "./useToken";
 export const App = () => {
   //@ts-ignore
   console.log(window.Telegram.WebApp, "this is telegram web app");
+  //@ts-ignore
+  console.log(window.Telegram.WebApp.initData, "this is telegram web app init data");
   const { token, setToken } = useToken();
 
   // if (!token) {
