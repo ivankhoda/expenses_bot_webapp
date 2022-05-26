@@ -10,11 +10,14 @@ import "./App.style.scss";
 import { useToken } from "./useToken";
 
 export const App = () => {
+  //@ts-ignore
+  console.log(window.Telegram.WebApp, "this is telegram web app");
   const { token, setToken } = useToken();
 
   // if (!token) {
   //   return <Login setToken={setToken} />;
   // }
+
   const routes = [
     { path: "/", name: "Main", Component: <Main /> },
     // { path: "/dashboard", name: "Dashboard", Component: <Dashboard /> },
