@@ -7,21 +7,8 @@ import { Sidebar } from "../Sidebar/Sidebar";
 import "../style.scss";
 import { WorkingPanel } from "../WorkingPanel/WorkingPanel";
 import "./App.style.scss";
-import { useToken } from "./useToken";
 
 export const App = () => {
-  //@ts-ignore
-  console.log(window.Telegram.WebApp, "this is telegram web app");
-  //@ts-ignore
-  console.log(window.Telegram.WebApp.initData, "this is telegram web app init data");
-  //@ts-ignore
-  window.Telegram.WebApp.sendData("hello duuude");
-  const { token, setToken } = useToken();
-
-  // if (!token) {
-  //   return <Login setToken={setToken} />;
-  // }
-
   const routes = [
     { path: "/", name: "Main", Component: <Main /> },
     // { path: "/dashboard", name: "Dashboard", Component: <Dashboard /> },
@@ -33,15 +20,11 @@ export const App = () => {
         <Header />
         <Sidebar />
         <WorkingPanel>
-          {/* {token ? ( */}
           <Routes>
             {routes.map(({ path, Component }) => (
               <Route key={path} path={path} element={Component} />
             ))}
           </Routes>
-          {/* ) : (
-            <Login setToken={setToken} />
-          )} */}
         </WorkingPanel>
       </HashRouter>
     </div>

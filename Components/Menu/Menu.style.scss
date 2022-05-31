@@ -1,8 +1,18 @@
+@import "../mixin";
+
 .Menu {
   display: flex;
   flex-direction: column;
-  min-width: 208px;
+
   background: #ffffff;
   height: 100vh;
   padding: 0;
+  margin: 0;
+  @include _320 {
+  }
+  @include _375 {
+  }
+}
+.logo {
+  height: 56px;
 }

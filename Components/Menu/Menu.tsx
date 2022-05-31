@@ -10,6 +10,7 @@ export const Menu = () => {
   return (
     <ul className="Menu">
       <MenuItem linkTo="/" text="Main" onClick={click} />
+      <MenuItem linkTo="/" text="Statistics" onClick={click} />
     </ul>
   );
 };
