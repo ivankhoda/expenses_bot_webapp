@@ -13,7 +13,7 @@ export const Main = () => {
     //@ts-ignore
 
     //@ts-ignore
-    window.Telegram.WebApp.sendData(data);
+    // window.Telegram.WebApp.sendData(data);
     //@ts-ignore
     window.Telegram.WebApp.sendData("privet");
   };
