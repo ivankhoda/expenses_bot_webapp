@@ -6,7 +6,7 @@ import "./Link.style.scss";
 type LinkProps = {
   linkTo: string;
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 export const MenuItem = (props: LinkProps) => {
