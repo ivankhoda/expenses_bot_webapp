@@ -4,5 +4,5 @@ dist
 key.pem
 cert.pem
 https
-
+.env
 package-lock.json
