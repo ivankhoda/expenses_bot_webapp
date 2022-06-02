@@ -1,21 +1,37 @@
 import React from "react";
-import { Main } from "../Main/Main";
 import "../style.scss";
 import "./App.style.scss";
 
 export const App = () => {
   //@ts-ignore
   const tg = window.Telegram.WebApp;
-
+  const initd = tg.initData;
   const click = () => {
-    tg.sendData("some string that we need to send");
+    tg.sendData(initd.user.username);
     //при клике на основную кнопку отправляем данные в строковом виде
   };
 
+  console.log(initd);
   tg.expand();
-  tg.ready();
 
-  const routes = [{ path: "/", name: "Main", Component: <Main /> }];
+  // const profileEl = document.getElementById("profile");
+  // const nameEl = document.getElementById("name");
+  // const usernameEl = document.getElementById("username");
+  // const test = document.getElementById("test");
+
+  // tg.ready();
+  // test!.innerText = `${JSON.stringify(tg)}`;
+  //@ts-ignore
+  // const { first_name, last_name, username, photo_url } = window.Telegram.WebAppUser;
+
+  // // set the profile
+
+  // nameEl!.innerText = `${first_name} ${last_name}`;
+
+  // usernameEl!.innerText = username;
+  const { first_name, last_name, username, photo_url } = window.Telegram.WebApp.initDataUnsafe.user;
+
+  // const routes = [{ path: "/", name: "Main", Component: <Main /> }];
 
   return (
     <>

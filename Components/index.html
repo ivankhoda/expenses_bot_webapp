@@ -2,13 +2,37 @@
 <html>
   <head>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- <script src="main.js"></script> -->
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/000000/rick-sanchez.png" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Control panel</title>
+    <title>Web APP</title>
   </head>
   <body class="body">
-    <main id="root" class="root"></main>
+    <main id="root" class="root">
+      <div class="user-info">
+        <h2 id="name"></h2>
+        <h3 id="username"></h3>
+      </div>
+      <button class="button" onclick="">Send test data</button>
+
+      <script>
+        const profileEl = document.getElementById("profile");
+        const nameEl = document.getElementById("name");
+        const usernameEl = document.getElementById("username");
+
+        window.Telegram.WebApp.ready();
+
+        const { first_name, last_name, username, photo_url } = window.Telegram.WebApp.initDataUnsafe.user;
+        const sendInfo = () => {
+          sendData({ first_name, last_name, username });
+        };
+        // set the profile
+        document.getElementById("button").addEventListener("onclick", () => sendInfo());
+        nameEl.innerText = `${first_name} ${last_name} welcome to web app`;
+
+        usernameEl.innerText = username;
+      </script>
+    </main>
   </body>
-  <script type="module" src="main.js"></script>
 </html>
